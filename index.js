@@ -17,11 +17,10 @@ app.get("/", (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail', // For Gmail, you can use other services like SMTP or Mailgun
     auth: {
-        user: 'piyushborkar95@gmail.com',  // Replace with your email
-        pass: 'hkqtnvblankbnrxa',
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
-
 
 app.post('/send-mail', (req, res) => {
     const { themeName } = req.body;
