@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // For Gmail, you can use other services like SMTP or Mailgun
+    service: 'gmail',
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -27,12 +27,11 @@ app.post('/send-mail', (req, res) => {
 
     console.log('Theme Name received:', themeName);
 
-    // Prepare the email content
     const mailOptions = {
-        from: 'piyushborkar95@gmail.com',  // Sender address
-        to: 'piyushborkar97@gmail.com',  // Replace with the recipient's email
-        subject: 'Theme Activated',  // Subject of the email
-        text: `The theme ${themeName} has been activated on your site.`,  // Email body
+        from: 'piyushborkar95@gmail.com', 
+        to: 'piyushborkar97@gmail.com',
+        subject: 'Theme Activated',
+        text: `The theme ${themeName} has been activated on your site.`,
     };
 
     // Send the email
