@@ -23,15 +23,20 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-mail', (req, res) => {
-    const { themeName } = req.body;
+    const { themeName, storeUrl, shopMail } = req.body;
 
     console.log('Theme Name received:', themeName);
+    console.log('Store URL received:', storeUrl);
+    console.log('Owner Email:', shopMail);
 
     const mailOptions = {
-        from: 'piyushborkar95@gmail.com', 
+        from: 'piyushborkar95@gmail.com',
         to: 'piyushborkar97@gmail.com',
         subject: 'Theme Activated',
-        text: `The theme ${themeName} has been activated on your site.`,
+        text: `Theme has been activated!
+                Theme Name: ${themeName}
+                Store URL: ${storeUrl}
+                Owner's Email: ${ownerEmail}`,
     };
 
     // Send the email
