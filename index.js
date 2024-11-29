@@ -36,7 +36,7 @@ app.post('/send-mail', (req, res) => {
         text: `Theme has been activated!
 Theme Name: ${themeName}
 Store URL: ${storeUrl}
-Owner's Email: ${ownerEmail}`,
+Owner's Email: ${shopMail}`,
     };
 
     // Send the email
