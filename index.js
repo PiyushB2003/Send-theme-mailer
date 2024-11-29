@@ -34,9 +34,9 @@ app.post('/send-mail', (req, res) => {
         to: 'piyushborkar97@gmail.com',
         subject: 'Theme Activated',
         text: `Theme has been activated!
-                Theme Name: ${themeName}
-                Store URL: ${storeUrl}
-                Owner's Email: ${ownerEmail}`,
+Theme Name: ${themeName}
+Store URL: ${storeUrl}
+Owner's Email: ${ownerEmail}`,
     };
 
     // Send the email
