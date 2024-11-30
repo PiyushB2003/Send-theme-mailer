@@ -14,8 +14,18 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
+// const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: process.env.EMAIL_USER,
+//         pass: process.env.EMAIL_PASS,
+//     },
+// });
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'https://radicalglobal.net',
+    port: 2096,
+    secure: false,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -30,7 +40,7 @@ app.post('/send-mail', (req, res) => {
     console.log('Owner Email:', shopMail);
 
     const mailOptions = {
-        from: 'peccular@gmail.com',
+        from: 'piyush.b@radicalglobal.net',
         to: 'piyushborkar97@gmail.com',
         subject: 'Theme Activated',
         text: `Theme has been activated!
