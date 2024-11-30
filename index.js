@@ -30,8 +30,8 @@ app.post('/send-mail', (req, res) => {
     console.log('Owner Email:', shopMail);
 
     const mailOptions = {
-        from: 'admin@peccular.com',
-        to: 'support@peccular.com',
+        from: 'peccular@gmail.com',
+        to: 'piyushborkar97@gmail.com',
         subject: 'Theme Activated',
         text: `Theme has been activated!
 Theme Name: ${themeName}
