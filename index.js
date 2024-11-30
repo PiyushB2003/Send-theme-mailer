@@ -31,7 +31,7 @@ app.post('/send-mail', (req, res) => {
 
     const mailOptions = {
         from: 'peccular@gmail.com',
-        to: 'piyushborkar97@gmail.com',
+        to: 'support@peccular.com',
         subject: 'Theme Activated',
         text: `Theme has been activated!
 Theme Name: ${themeName}
