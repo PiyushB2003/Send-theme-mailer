@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 dotenv.config();
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.status(200).json("Hello World!");
 });
 
 const transporter = nodemailer.createTransport({
